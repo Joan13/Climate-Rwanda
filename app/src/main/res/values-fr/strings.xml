@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Climate Rwanda</string>
+    <string name="choose_language">Choisir la langue d\'affichage</string>
+    <string name="splash_text">Rwanda</string>
+    <string name="agriculture">Agriculture</string>
+    <string name="Weather">Meteo</string>
+    <string name="disasters">Catastrophes</string>
+    <string name="areas">Espaces</string>
+    <string name="settings">Parametres</string>
+    <string name="environment">Environnement</string>
+    <string name="explore_rwanda">Explorez le Rwanda</string>
+    <string name="apply_text">Autoriser les notifications</string>
+    <string name="as_farmer">En tant que cultivateur</string>
+    <string name="as_citizen">En tant que citoyen</string>
+    <string name="as_tourist">En tant que touriste</string>
+</resources>

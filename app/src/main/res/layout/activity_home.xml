@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_weather"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@mipmap/earth"
+                android:gravity="center"
+                android:id="@+id/choose_lang_text"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="130dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/provinces"
+            android:layout_margin="25dp"
+            android:layout_below="@id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_marginBottom="15dp"
+                android:id="@+id/kigali"
+                android:visibility="gone"
+                android:text="@string/kigali_city"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/rounded_borders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/districts_kig"
+                android:layout_below="@id/kigali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/prov_kig1"
+                    android:text="> Nyarugenge"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_kig2"
+                    android:text="> Kicukiro"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_kig1"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_kig3"
+                    android:text="> Kamonyi"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_kig2"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_below="@id/districts_kig"
+                android:id="@+id/northern"
+                android:visibility="gone"
+                android:text="@string/northern"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/rounded_borders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/districts_1"
+                android:layout_below="@id/northern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/prov_1"
+                    android:text="> Burera"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_2"
+                    android:layout_below="@id/prov_1"
+                    android:text="> Gicumbi"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_3"
+                    android:text="> Gakenke"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_2"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_4"
+                    android:text="> Musanze"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_3"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_5"
+                    android:text="> Rulindo"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_4"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:visibility="gone"
+                android:layout_below="@id/districts_1"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/southern"
+                android:text="@string/southern"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/rounded_borders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/districts_2"
+                android:layout_below="@id/southern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/prov_21"
+                    android:text="> Huye"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_22"
+                    android:layout_below="@id/prov_21"
+                    android:text="> Ruhango"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_23"
+                    android:text="> Nyamagabe"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_22"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_24"
+                    android:text="> Gisagara"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_23"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_25"
+                    android:text="> Muhanga"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_24"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_26"
+                    android:text="> Kamonyi"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_25"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_27"
+                    android:text="> Nyanza"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_26"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_28"
+                    android:text="> Nyaruguru"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_27"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:visibility="gone"
+                android:layout_below="@+id/districts_2"
+                android:id="@+id/western"
+                android:layout_marginBottom="15dp"
+                android:text="@string/western"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/rounded_borders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/districts_3"
+                android:layout_below="@id/western"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/prov_31"
+                    android:text="> Karongi"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_32"
+                    android:layout_below="@id/prov_31"
+                    android:text="> Nyabihu"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_33"
+                    android:text="> Rubavu"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_32"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_34"
+                    android:text="> Rusizi"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_33"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_35"
+                    android:text="> Ngororero"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_34"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_36"
+                    android:text="> Nyamasheke"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_35"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_37"
+                    android:text="> Rutsiro"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_36"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/eastern"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@id/districts_3"
+                android:text="@string/eastern"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/rounded_borders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/districts_4"
+                android:layout_below="@id/eastern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/prov_41"
+                    android:text="> Bugesera"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_42"
+                    android:layout_below="@id/prov_41"
+                    android:text="> Gatsibo"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_43"
+                    android:text="> Kayonza"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_42"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_44"
+                    android:text="> Ngoma"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_43"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_45"
+                    android:text="> Kirehe"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_44"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_46"
+                    android:text="> Nyagatare"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_45"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/prov_47"
+                    android:text="> Rwamagana"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorTexts"
+                    android:layout_below="@id/prov_46"
+                    android:background="@drawable/rounded_borders_white"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/il"
+            android:layout_below="@id/provinces"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/air_pollution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@color/colorAccent"
+                        android:src="@mipmap/air_pollution"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/air_pollution"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexts"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/agriculture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@color/colorAccent"
+                        android:src="@mipmap/agriculture"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/agriculture"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexts"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/weather"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/Weather"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexts"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/disasters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/desaster"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/disasters"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexts"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/environment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/environment"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/environment"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexts"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/areas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_rowWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/areas"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/areas"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTexts"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/il"
+            android:text="@string/settings"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</ScrollView>

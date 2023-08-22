@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Climate Rwanda</string>
+
+    <string name="choose_language">Hitamo ururimi</string>
+    <string name="splash_text">Rwanda</string>
+    <string name="agriculture">Agriculture</string>
+    <string name="Weather">Weather</string>
+    <string name="disasters">Disasters</string>
+    <string name="areas">Areas</string>
+    <string name="settings">Settings</string>
+    <string name="environment">Environment</string>
+    <string name="explore_rwanda">Explore Rwanda</string>
+    <string name="apply_text">Apply for notifications</string>
+    <string name="as_farmer">Apply as farmer</string>
+    <string name="as_citizen">Apply as citizen</string>
+    <string name="as_tourist">Apply as tourist</string>
+</resources>
